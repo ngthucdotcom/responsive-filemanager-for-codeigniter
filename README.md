@@ -98,4 +98,4 @@ root                          # → Root Directory
 - [PHP dotenv by vlucas](https://github.com/vlucas/phpdotenv).
 
 ## License
-Trippo File Manager is licensed under the [Creative Commons Attribution-NonCommercial 3.0 Unported License](LICENSE.TXT).
+Trippo File Manager is licensed under the [Creative Commons Attribution-NonCommercial 3.0 Unported License - CC-BY-NC-3.0](LICENSE).
