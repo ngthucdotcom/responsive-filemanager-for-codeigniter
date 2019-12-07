@@ -3,5 +3,9 @@
 _config.yml
 
 composer.lock
+
+/bower_components/
 /vendor/
-bower_components
+
+/upload/
+/thumbs/
