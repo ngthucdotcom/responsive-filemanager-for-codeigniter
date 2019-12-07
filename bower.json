@@ -1,12 +1,12 @@
 {
-  "name": "ci-custom-core",
-  "homepage": "https://github.com/ngthucdotcom/ci-custom-core",
+  "name": "trippo-file-manager",
+  "homepage": "https://github.com/ngthucdotcom/trippo-filemanager",
   "authors": [
     "Nguyen Thuc <contact@ngthuc.com>"
   ],
-  "description": "The CodeIgniter framework with core custom",
+  "description": "Responsive File Manager by Trippo",
   "main": "",
-  "license": "MIT",
+  "license": "Creative Commons Attribution-NonCommercial 3.0 Unported License",
   "private": true,
   "ignore": [
     "**/.*",

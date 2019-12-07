@@ -1,5 +1,5 @@
 <?php
-
+require '../vendor/autoload.php';
 try {
     if (!isset($config)) {
         $config = include 'config/config.php';

@@ -1,4 +1,9 @@
 <?php
+$dir = realpath('../../../../');
+
+$dotenv = Dotenv\Dotenv::createImmutable($dir,'filemanager.env');
+$dotenv->load();
+
 $version = "9.14.0";
 if (session_id() == '') {
     session_start();
@@ -76,7 +81,7 @@ $config = array(
     | with start and final /
     |
     */
-    'upload_dir' => '/source/',
+    'upload_dir' => getenv('RFM_UPLOAD_DIR'),
     /*
     |--------------------------------------------------------------------------
     | relative path from filemanager folder to upload folder
@@ -85,7 +90,7 @@ $config = array(
     | with final /
     |
     */
-    'current_path' => '../source/',
+    'current_path' => getenv('RFM_CURRENT_PATH'),
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +101,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_base_path' => '../thumbs/',
+    'thumbs_base_path' => getenv('RFM_THUMBS_BASE_PATH'),
 
     /*
     |--------------------------------------------------------------------------
@@ -107,7 +112,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_upload_dir' => '/thumbs/',
+    'thumbs_upload_dir' => getenv('RFM_THUMBS_UPLOAD_DIR'),
 
 
     /*
@@ -568,9 +573,9 @@ return array_merge(
         'tui_defaults_config' => array(
             //'common.bi.image'                   => $config['common.bi.image'],
             //'common.bisize.width'               => $config['common.bisize.width'],
-            //'common.bisize.height'              => $config['common.bisize.height'], 
+            //'common.bisize.height'              => $config['common.bisize.height'],
             'common.backgroundImage'            => $config['common.backgroundImage'],
-            'common.backgroundColor'            => $config['common.backgroundColor'], 
+            'common.backgroundColor'            => $config['common.backgroundColor'],
             'common.border'                     => $config['common.border'],
             'header.backgroundImage'            => $config['header.backgroundImage'],
             'header.backgroundColor'            => $config['header.backgroundColor'],

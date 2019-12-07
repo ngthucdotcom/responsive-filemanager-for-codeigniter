@@ -1,5 +1,29 @@
 {
+    "description": "The Trippo File Manger package from ResponsiveFilemanager",
+    "name": "ngthuc/trippo-filemanager",
+    "type": "library",
+    "keywords": ["ngthuc","trippo-filemanager","filemanager","responsivefilemanager"],
+    "homepage": "https://ngthucdotcom.github.io/trippo-filemanager/",
+    "license": "Creative Commons Attribution-NonCommercial 3.0 Unported License",
+    "authors": [
+        {
+            "name": "Nguyen Thuc",
+            "email": "contact@ngthuc.com",
+            "homepage": "https://ngthuc.com",
+            "role": "Developer"
+        },
+        {
+            "name": "ALBERTO PERIPOLLI",
+            "role": "Owner of ResponsiveFileManager"
+        },
+        {
+            "name": "",
+            "homepage": "https://github.com/ngthucdotcom/trippo-filemanager/contributors",
+            "role": "Contributor"
+        }
+    ],
     "require": {
-        "ngthuc/ci-custom-core": "^2.4"
+        "php": ">=5.6",
+        "vlucas/phpdotenv": "^4.0"
     }
 }

@@ -1,4 +1,5 @@
 <?php
+require '../vendor/autoload.php';
 $config = include 'config/config.php';
 
 include 'include/utils.php';
