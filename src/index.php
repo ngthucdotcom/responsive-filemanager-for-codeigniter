@@ -1,5 +1,5 @@
 <?php
-require (!is_dir('../../../../../vendor') ? '../' : '../../../../') . 'vendor/autoload.php';
+require (!is_dir('../../../../vendor') ? '../' : '../../../../') . 'vendor/autoload.php';
 header("Expires: Mon, 26 Jul 2019 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
 

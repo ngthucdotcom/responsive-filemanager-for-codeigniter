@@ -1,5 +1,5 @@
 <?php
-require (!is_dir('../../../../../vendor') ? '../' : '../../../../') . 'vendor/autoload.php';
+require (!is_dir('../../../../vendor') ? '../' : '../../../../') . 'vendor/autoload.php';
 try {
     if (!isset($config)) {
         $config = include 'config/config.php';
