@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ngthuc/ci-custom-core": "^2.4"
+    }
+}
