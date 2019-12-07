@@ -1,5 +1,7 @@
 .DS_Store
 
+_config.yml
+
 composer.lock
 /vendor/
 bower_components
