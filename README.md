@@ -12,7 +12,10 @@ Released under Creative Commons Attribution-NonCommercial 3.0 Unported License.
 
 Creator : info@albertoperipolli.com - tr1pp0
 
-# Server Requirements
+## Version ResponsiveFilemanager
+[Resposive Filemanager v9.14.0](https://github.com/trippo/ResponsiveFilemanager/releases/latest) (May 5th, 2019)
+
+## Server Requirements
 * OS: Linux 18.04 (recommended)
 * PHP: PHP 5.6 or newer
 
