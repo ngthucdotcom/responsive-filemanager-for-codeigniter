@@ -17,7 +17,7 @@ Creator : info@albertoperipolli.com - tr1pp0
 * OS: Linux 18.04 (recommended)
 * PHP: PHP 5.6 or newer
 
-## Installation
+## Installation and try demo without AMP stack
 1. Run composer require project (for init new project) or update (for reload dependencies on new environment) via command line at root folder
 * Require project
 ```shell
@@ -36,6 +36,7 @@ root                          # → Root Directory
             └── filemanager.env
 ```
 3. Set-up environment if you want use another variable values
+4. Try demo via command `php -S localhost:80` on root directory
 
 ## Author of package
 * [Nguyen Thuc](https://ngthuc.github.io/)
