@@ -90,7 +90,7 @@ $config = array(
     | with final /
     |
     */
-    'current_path' => getenv('RFM_CURRENT_PATH'),
+    'current_path' => check_exist(getenv('RFM_CURRENT_PATH')),
 
     /*
     |--------------------------------------------------------------------------
@@ -101,7 +101,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_base_path' => getenv('RFM_THUMBS_BASE_PATH'),
+    'thumbs_base_path' => check_exist(getenv('RFM_THUMBS_BASE_PATH')),
 
     /*
     |--------------------------------------------------------------------------
@@ -622,3 +622,10 @@ return array_merge(
         ),
     )
 );
+
+function check_exist($path) {
+    if (!is_dir($path)) {
+      mkdir($path);
+    }
+    return $path;
+}

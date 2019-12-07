@@ -1,5 +1,6 @@
 <?php
-require '../vendor/autoload.php';
+
+require (!is_dir('../../../../../vendor') ? '../' : '../../../../') . 'vendor/autoload.php';
 
 $time = time();
 
