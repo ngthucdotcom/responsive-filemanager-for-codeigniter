@@ -1,5 +1,5 @@
 <?php
-$dir = realpath('../../../../');
+$dir = !realpath('../../../../filemanager.env') ? realpath('../') : realpath('../../../../'); // load default environment
 
 $dotenv = Dotenv\Dotenv::createImmutable($dir,'filemanager.env');
 $dotenv->load();
