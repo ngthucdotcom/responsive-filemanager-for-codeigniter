@@ -9,6 +9,20 @@ if (session_id() == '') {
     session_start();
 }
 
+if ($_GET['user'] != null) {
+  $_user = htmlspecialchars($_GET['user']);
+  if ($_user == 'root' || $_user == 'admin') { // customize role or user to redirect root directory
+    $_SESSION['RF']['subfolder'] = '';
+  } else {
+    $_SESSION['RF']['subfolder'] = $_user;
+  }
+  $_upload_dir = realpath(check_exist(getenv('RFM_CURRENT_PATH').$_SESSION['RF']['subfolder']));
+  $_thumbs_dir = realpath(check_exist(getenv('RFM_THUMBS_BASE_PATH').$_SESSION['RF']['subfolder']));
+  // if ($_upload_dir != false && $_thumbs_dir != false) {
+  //   echo '<script>alert("user: '.$_user.'")</script>';
+  // }
+}
+
 function check_exist($path) {
     if (!is_dir($path)) {
       mkdir($path);
