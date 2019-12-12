@@ -9,19 +9,42 @@ if (session_id() == '') {
     session_start();
 }
 
-if ($_GET['user'] != null) {
-  $_user = htmlspecialchars($_GET['user']);
-  if ($_user == 'root' || $_user == 'admin') { // customize role or user to redirect root directory
-    $_SESSION['RF']['subfolder'] = '';
-  } else {
-    $_SESSION['RF']['subfolder'] = $_user;
+use \Firebase\JWT\JWT;
+
+if (getenv('RFM_SECURE_TYPE') == "null") {
+  $_SESSION['RF']['subfolder'] = ''; // nothing execute
+} else if (getenv('RFM_SECURE_TYPE') == "GET") {
+  if ($_GET['user'] != null) {
+    $_user = htmlspecialchars($_GET['user']);
+    if ($_user == 'root' || $_user == 'admin') { // customize role or user to redirect root directory
+      $_SESSION['RF']['subfolder'] = '';
+    } else {
+      $_SESSION['RF']['subfolder'] = $_user;
+    }
+    $_upload_dir = realpath(check_exist(getenv('RFM_CURRENT_PATH').$_SESSION['RF']['subfolder']));
+    $_thumbs_dir = realpath(check_exist(getenv('RFM_THUMBS_BASE_PATH').$_SESSION['RF']['subfolder']));
   }
-  $_upload_dir = realpath(check_exist(getenv('RFM_CURRENT_PATH').$_SESSION['RF']['subfolder']));
-  $_thumbs_dir = realpath(check_exist(getenv('RFM_THUMBS_BASE_PATH').$_SESSION['RF']['subfolder']));
-  // if ($_upload_dir != false && $_thumbs_dir != false) {
-  //   echo '<script>alert("user: '.$_user.'")</script>';
-  // }
+} else {
+  /**
+   * @Case: use JWT with RS256 and cookie jwt
+   */
+  if ($_COOKIE['rfm_token'] != null) {
+    // $jwt = JWT::encode($payload, $privateKey, 'RS256'); 
+    $publicKey = file_get_contents(getenv('RFM_SECURE_TYPE'));
+    $decoded = JWT::decode($jwt, $publicKey, array('RS256'));
+    $decoded_array = (array) $decoded;
+
+    $_user = htmlspecialchars($decoded_array['sub']);
+    if ($_user == 'root' || $_user == 'admin') { // customize role or user to redirect root directory
+      $_SESSION['RF']['subfolder'] = '';
+    } else {
+      $_SESSION['RF']['subfolder'] = $_user;
+    }
+    $_upload_dir = realpath(check_exist(getenv('RFM_CURRENT_PATH').$_SESSION['RF']['subfolder']));
+    $_thumbs_dir = realpath(check_exist(getenv('RFM_THUMBS_BASE_PATH').$_SESSION['RF']['subfolder']));
+  }
 }
+
 
 function check_exist($path) {
     if (!is_dir($path)) {
