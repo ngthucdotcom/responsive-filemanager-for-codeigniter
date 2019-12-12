@@ -38,6 +38,15 @@ root                          # → Root Directory
 3. Set-up environment if you want use another variable values
 4. Try demo via command `php -S localhost:80` on root directory
 
+## Secure (optional)
+You can choose secure type: none (default), GET method and cookie with JWT and RS256
+1. None-Secure (default): nothing change everythings
+2. `GET` method: add `user` value to url. Example: `http://domain.of.you/dialog.php?user=username_or_subfolder_name&.....`. Don't forget change environment of `RFM_SECURE_TYPE` to `GET`
+3. Cookie with JWT and RS256
+* Change environment `RFM_SECURE_TYPE` to path-to-public-key (create with [openssl](https://lunar.lyris.com/help/lm_help/12.0/Content/generating_public_and_private_keys.html)).
+* Create token with payload has `sub` param is username or subfolder name and encode with private key
+* Add token to cookie with cookie name is `rfm_token`
+
 ## Author of package
 * [Nguyen Thuc](https://ngthuc.github.io/)
 * Homepage: ngthuc.com
@@ -95,6 +104,7 @@ root                          # → Root Directory
 - [jPlayer](http://jplayer.org)
 - [Lazy Load Plugin for jQuery](http://www.appelsiini.net/projects/lazyload)
 - [PHP dotenv by vlucas](https://github.com/vlucas/phpdotenv).
+- [PHP-JWT by firebase](https://github.com/firebase/php-jwt).
 
 ## License
 Trippo File Manager is licensed under the [Creative Commons Attribution-NonCommercial 3.0 Unported License - CC-BY-NC-3.0](LICENSE).

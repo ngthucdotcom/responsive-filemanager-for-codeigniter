@@ -11,7 +11,7 @@ if (session_id() == '') {
 
 use \Firebase\JWT\JWT;
 
-if (getenv('RFM_SECURE_TYPE') == "null") {
+if (getenv('RFM_SECURE_TYPE') == "none") {
   $_SESSION['RF']['subfolder'] = ''; // nothing execute
 } else if (getenv('RFM_SECURE_TYPE') == "GET") {
   if ($_GET['user'] != null) {
@@ -31,7 +31,7 @@ if (getenv('RFM_SECURE_TYPE') == "null") {
   if ($_COOKIE['rfm_token'] != null) {
     // $jwt = JWT::encode($payload, $privateKey, 'RS256'); 
     $publicKey = file_get_contents(getenv('RFM_SECURE_TYPE'));
-    $decoded = JWT::decode($jwt, $publicKey, array('RS256'));
+    $decoded = JWT::decode($_COOKIE['rfm_token'], $publicKey, array('RS256'));
     $decoded_array = (array) $decoded;
 
     $_user = htmlspecialchars($decoded_array['sub']);
