@@ -47,6 +47,23 @@ You can choose secure type: none (default), GET method and cookie with JWT and R
 * Create token with payload has `sub` param is username or subfolder name and encode with private key
 * Add token to cookie with cookie name is `rfm_token`
 
+## OpenSSL Example
+1. Install
+* Windows: [click-here](https://slproweb.com/products/Win32OpenSSL.html)
+* Linux: [view on GitHub](https://github.com/openssl/openssl) or [tutorial](https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/)
+2. Generating public and private key with openssl
+* Navigate to your project folder (or anywhere you need openssl)
+* Open command prompt or terminal
+* Generating private key
+```
+openssl genrsa -out rsa.private 1024
+```
+* Generating public key with private key
+```
+openssl rsa -in rsa.private -out rsa.public -pubout -outform PEM
+```
+* View detail on [website](https://lunar.lyris.com/help/lm_help/12.0/Content/generating_public_and_private_keys.html)
+
 ## Author of package
 * [Nguyen Thuc](https://ngthuc.github.io/)
 * Homepage: ngthuc.com
