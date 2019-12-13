@@ -9,3 +9,6 @@ composer.lock
 
 /upload/
 /thumbs/
+
+rsa.private
+rsa.public
