@@ -1,19 +1,19 @@
 # Trippo File Manager Package (as ResponsiveFileManager)
 
 *********************************************
-Trippo File Manager v2.4.0 - Dec 12th, 2019
+## Trippo File Manager v2.4.0 - Dec 12th, 2019
 *********************************************
 ## Changelog
 * Add firebase/php-jwt package
 * Use firebase/php-jwt package as a option secure type
 * Update README: add usage guide RFM_SECURE_TYPE
 *********************************************
-Trippo File Manager v2.3.0 - Dec 8th, 2019
+## Trippo File Manager v2.3.0 - Dec 8th, 2019
 *********************************************
 ## Changelog
 * Add check subfolder by GET method
 *********************************************
-Trippo File Manager v2.2.0 - Dec 8th, 2019
+## Trippo File Manager v2.2.0 - Dec 8th, 2019
 *********************************************
 ## Changelog
 * Clean code unused
@@ -31,7 +31,7 @@ Trippo File Manager v2.0.0 - Dec 8th, 2019
 * Update `.gitignore`
 * Add guide: try the demo with a built-in server (available PHP 5.6 or newer)
 *********************************************
-Trippo File Manager v1.0.0 - Dec 8th, 2019
+## Trippo File Manager v1.0.0 - Dec 8th, 2019
 *********************************************
 ## Server Requirements
 * OS: Linux 18.04 (recommended)
