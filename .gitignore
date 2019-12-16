@@ -4,7 +4,6 @@ _config.yml
 
 composer.lock
 
-/bower_components/
 /vendor/
 
 /upload/
