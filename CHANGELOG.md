@@ -1,6 +1,10 @@
 # Trippo File Manager Package (as ResponsiveFileManager)
 
 *********************************************
+## Trippo File Manager v2.4.1 - Dec 16th, 2019
+### Changelog
+* Clean code unused
+*********************************************
 ## Trippo File Manager v2.4.0 - Dec 12th, 2019
 ### Changelog
 * Add firebase/php-jwt package
