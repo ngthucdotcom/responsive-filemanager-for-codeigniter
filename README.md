@@ -22,7 +22,7 @@ Creator : info@albertoperipolli.com - tr1pp0
 * OS: Linux 18.04 (recommended)
 * PHP: PHP 5.6 or newer
 
-## Installation and try demo without AMP stack
+## Installation
 1. Run composer require project (for init new project) or update (for reload dependencies on new environment) via command line at root folder
 * Require project
 ```shell
@@ -41,7 +41,7 @@ root                          # → Root Directory
             └── filemanager.env
 ```
 3. Set-up environment if you want use another variable values
-4. Try demo via command `php -S localhost:80` on root directory
+4. Try demo by [built-in web server](https://www.php.net/manual/en/features.commandline.webserver.php) via command `php -S localhost:80` (PHP 5.4.0 or newer) on root directory
 
 ## Secure (optional)
 You can choose secure type: none (default), GET method and cookie with JWT and RS256
